@@ -29,8 +29,8 @@
             </div>
             <div class="right">
                 <button
-                    class="bg-[#137FEC] px-[30px] py-[8px] text-white rounded-[18px] flex gap-5 justify-center items-center font-bold">
-                    <span class="text-[25px]">+</span>Add Card
+                    class="bg-[#137FEC] px-[30px] py-[8px] text-white rounded-[18px] flex gap-5 justify-center items-center font-bold " onclick="show_add()">
+                    <span class="text-[25px]" >+</span>Add Card
                 </button>
             </div>
         </div>
@@ -48,6 +48,7 @@
             <div class="content w-[70%] ml-[20%] grid grid-cols-3 gap-10">
 
                 <!-- Card -->
+
                 <div class="card h-[25vh]  border border-blue-300/20 rounded-[15px] bg-[#1C2537] ">
                     <div class="top flex justify-between mt-4 items-center">
                         <div class="t-left ml-10">
@@ -66,13 +67,61 @@
                         <h1 class="text-[28px] text-[#B8BBC0] tracking-[3px]">**** **** **** 2345</h1>
                     </div>
                 </div>
-                
+                <div class="card h-[25vh]  border border-blue-300/20 rounded-[15px] bg-[#37301c] ">
+                    <div class="top flex justify-between mt-4 items-center">
+                        <div class="t-left ml-10">
+                            <h1 class="font-[400] text-[#C5C8CC] text-xl">Attijari WafaBank</h1>
+                        </div>
+                        <div class="t-right mr-10">
+                            <i class="bi bi-credit-card text-[#8D929C] text-[35px]"></i>
+                        </div>
+                    </div>
 
-
-
+                    <div class="center ml-10 mt-1">
+                        <h3 class="text-[#8D929C]">Balance</h3>
+                        <h1 class="text-[40px] font-bold">$<span>1,250.00</span></h1>
+                    </div>
+                    <div class="buttom ml-10 mt-1">
+                        <h1 class="text-[28px] text-[#B8BBC0] tracking-[3px]">**** **** **** 2345</h1>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
+
+    <!-- Modal -->
+    <div class="modal bg-black w-full h-full fixed top-0 flex items-center justify-center" id="add_card_modal">
+        <div class="modal h-[450px] w-[520px] bg-[#161718] rounded-xl border border-gray-400/30">
+            <div class="close flex justify-end ">
+                                <i  class="bi bi-x-lg text-white mt-3 font-bold mr-4 text-[20px] text-[#9BA2AE] hover:cursor-pointer" onclick="hide_modal()"></i>
+
+            </div>
+            <div class="top flex justify-center">
+                <h1 class="text-white font-bold text-[30px]">Add New Virtual Card</h1>
+            </div>
+            <div class="inputform flex flex-col mt-7 ml-10">
+                <label for="" class="text-white font-[400] relative left-1 ">Bank Name</label>
+                <div class="input relative mt-4 h-[60px] w-[450px] relative bottom-2">
+                    <input type="text" placeholder="e.g., Nova Bank, Attijari Bank"
+                        class="h-[60px] w-[450px] rounded-xl bg-[#2C2C2C] p-4 pr-12 border border-gray-400/20 text-white" />
+
+                    <i class="bi bi-bank absolute right-3 bottom-4 text-xl text-[#9CA3AF]"></i>
+                </div>
+            </div>
+            <div class="inputform flex flex-col mt-2 ml-10">
+                <label for="" class="text-white font-[400] relative left-1 ">Initial Balance</label>
+                <div class="input relative mt-4 h-[60px] w-[450px] relative bottom-2">
+                    <input type="text" placeholder="$ 1,000.00"
+                        class="h-[60px] w-[450px] rounded-xl bg-[#2C2C2C] p-4 pr-12 border border-gray-400/20 text-white" />
+
+                </div>
+            </div>
+
+            <button class="relative mt-8 font-bold h-[60px] w-[450px] relative bottom-2 text-white bg-[#137FEC] rounded-xl ml-10 mr-10 shadow-lg shadow-[#137FEC]/60" id="create_card">CREATE CARD</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
 </body>
 
-</html> 
+</html>
